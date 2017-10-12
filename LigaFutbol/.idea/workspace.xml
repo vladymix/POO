@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51a348d2-9941-49d1-822d-06069c81d69d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$" />
-    </list>
+    <list default="true" id="51a348d2-9941-49d1-822d-06069c81d69d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -96,31 +94,6 @@
             <path>
               <item name="LigaFutbol" type="b2602c69:ProjectViewProjectNode" />
               <item name="LigaFutbol" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LigaFutbol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LigaFutbol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LigaFutbol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LigaFutbol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="upm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LigaFutbol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LigaFutbol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="upm" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LigaFutbol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LigaFutbol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="upm" type="462c0819:PsiDirectoryNode" />
-              <item name="utilities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
