@@ -3,9 +3,12 @@ package com.upm.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Equipo {
+public class Equipo extends Clasificacion {
 
     private String name;
+
+    private int golesFavor =0;
+    private int golesContra =0;
 
     private List<Partido> partidos = new ArrayList<>();
     private List<Partido> partidosGanados = new ArrayList<>();
@@ -21,8 +24,20 @@ public class Equipo {
         partidos.add(partidoJugado);
     }
 
+    public int getGolesContra() {
+        return golesContra;
+    }
+
+    public int getGolesFavor() {
+        return golesFavor;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setGolesContra(int golesContra) {
+        this.golesContra = golesContra;
     }
 
     public void setName(String name) {
@@ -53,36 +68,6 @@ public class Equipo {
         return this.getPartidosAsString(this.partidos);
     }
 
-    public void resetAndLoadStatistics() {
-
-        this.partidosPerdidos = new ArrayList<>();
-        this.partidosGanados = new ArrayList<>();
-        this.partidosEmpatados = new ArrayList<>();
-
-        for (Partido partido : this.partidos) {
-
-            boolean jugoComoLocal = partido.getEquipoLocal().getName().equals(this.getName());
-
-            if (partido.getGolesLocal() == partido.getGolesVisitantes()) {
-                this.partidosEmpatados.add(partido);
-            } else {
-                if (jugoComoLocal) {
-                    if (partido.getGolesLocal() > partido.getGolesVisitantes()) {
-                        this.partidosGanados.add(partido);
-                    } else {
-                        this.partidosPerdidos.add(partido);
-                    }
-                } else {
-                    if (partido.getGolesLocal() < partido.getGolesVisitantes()) {
-                        this.partidosGanados.add(partido);
-                    } else {
-                        this.partidosPerdidos.add(partido);
-                    }
-                }
-            }
-        }
-    }
-
     private String getPartidosAsString(List<Partido> partidos){
         String partidosString = "";
 
@@ -100,22 +85,42 @@ public class Equipo {
 
         boolean jugoComoLocal = partidoJugado.getEquipoLocal().getName().equals(this.getName());
 
+        // Empate
         if (partidoJugado.getGolesLocal() == partidoJugado.getGolesVisitantes()) {
             this.partidosEmpatados.add(partidoJugado);
+            this.sumaGoles(partidoJugado.getGolesLocal(),partidoJugado.getGolesVisitantes());
         } else {
+
             if (jugoComoLocal) {
+                this.sumaGoles(partidoJugado.getGolesLocal(),partidoJugado.getGolesVisitantes());
+
                 if (partidoJugado.getGolesLocal() > partidoJugado.getGolesVisitantes()) {
                     this.partidosGanados.add(partidoJugado);
                 } else {
                     this.partidosPerdidos.add(partidoJugado);
                 }
             } else {
+
+                this.sumaGoles(partidoJugado.getGolesVisitantes(),partidoJugado.getGolesLocal());
+
                 if (partidoJugado.getGolesLocal() < partidoJugado.getGolesVisitantes()) {
                     this.partidosGanados.add(partidoJugado);
                 } else {
                     this.partidosPerdidos.add(partidoJugado);
                 }
             }
+        }
+    }
+
+    private void sumaGoles(int favor, int contra){
+        this.golesFavor +=favor;
+        this.golesContra +=contra;
+
+        if(favor> contra){
+            this.sumaPuntosGanados();
+        }
+        else if(favor ==contra){
+           this.sumaPuntosEmpatados();
         }
     }
 }
