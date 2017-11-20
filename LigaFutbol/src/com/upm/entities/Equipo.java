@@ -3,12 +3,11 @@ package com.upm.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Equipo extends Clasificacion {
+public class Equipo {
 
     private String name;
 
-    private int golesFavor =0;
-    private int golesContra =0;
+    private Posicion posicion;
 
     private List<Partido> partidos = new ArrayList<>();
     private List<Partido> partidosGanados = new ArrayList<>();
@@ -19,25 +18,43 @@ public class Equipo extends Clasificacion {
         this.name = name;
     }
 
+    public void actualizaClasificacion(Partido partido) {
+        this.posicion.actualizaPosicion(this, partido);
+        this.partidos.add(partido);
+        this.savePartido(partido);
+    }
+
+    private void savePartido(Partido partidoJugado) {
+
+        boolean jugoComoLocal = partidoJugado.getEquipoLocal().getName().equals(this.getName());
+
+        // Empate
+        if (partidoJugado.getGolesLocal() == partidoJugado.getGolesVisitantes()) {
+            this.partidosEmpatados.add(partidoJugado);
+        } else {
+
+            if (jugoComoLocal) {
+                if (partidoJugado.getGolesLocal() > partidoJugado.getGolesVisitantes()) {
+                    this.partidosGanados.add(partidoJugado);
+                } else {
+                    this.partidosPerdidos.add(partidoJugado);
+                }
+            } else {
+                if (partidoJugado.getGolesLocal() < partidoJugado.getGolesVisitantes()) {
+                    this.partidosGanados.add(partidoJugado);
+                } else {
+                    this.partidosPerdidos.add(partidoJugado);
+                }
+            }
+        }
+    }
+
     public void addPartido(Partido partidoJugado) {
-        this.loadStatistics(partidoJugado);
-        partidos.add(partidoJugado);
-    }
-
-    public int getGolesContra() {
-        return golesContra;
-    }
-
-    public int getGolesFavor() {
-        return golesFavor;
+        this.actualizaClasificacion(partidoJugado);
     }
 
     public String getName() {
         return name;
-    }
-
-    public void setGolesContra(int golesContra) {
-        this.golesContra = golesContra;
     }
 
     public void setName(String name) {
@@ -64,6 +81,14 @@ public class Equipo extends Clasificacion {
         return this.getPartidosAsString(this.partidosPerdidos);
     }
 
+    public Posicion getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(Posicion posicion) {
+        this.posicion = posicion;
+    }
+
     public String getTodosPartidosAsString(){
         return this.getPartidosAsString(this.partidos);
     }
@@ -79,48 +104,5 @@ public class Equipo extends Clasificacion {
             }
         }
         return String.format("[%s]",partidosString );
-    }
-
-    private void loadStatistics(Partido partidoJugado) {
-
-        boolean jugoComoLocal = partidoJugado.getEquipoLocal().getName().equals(this.getName());
-
-        // Empate
-        if (partidoJugado.getGolesLocal() == partidoJugado.getGolesVisitantes()) {
-            this.partidosEmpatados.add(partidoJugado);
-            this.sumaGoles(partidoJugado.getGolesLocal(),partidoJugado.getGolesVisitantes());
-        } else {
-
-            if (jugoComoLocal) {
-                this.sumaGoles(partidoJugado.getGolesLocal(),partidoJugado.getGolesVisitantes());
-
-                if (partidoJugado.getGolesLocal() > partidoJugado.getGolesVisitantes()) {
-                    this.partidosGanados.add(partidoJugado);
-                } else {
-                    this.partidosPerdidos.add(partidoJugado);
-                }
-            } else {
-
-                this.sumaGoles(partidoJugado.getGolesVisitantes(),partidoJugado.getGolesLocal());
-
-                if (partidoJugado.getGolesLocal() < partidoJugado.getGolesVisitantes()) {
-                    this.partidosGanados.add(partidoJugado);
-                } else {
-                    this.partidosPerdidos.add(partidoJugado);
-                }
-            }
-        }
-    }
-
-    private void sumaGoles(int favor, int contra){
-        this.golesFavor +=favor;
-        this.golesContra +=contra;
-
-        if(favor> contra){
-            this.sumaPuntosGanados();
-        }
-        else if(favor ==contra){
-           this.sumaPuntosEmpatados();
-        }
     }
 }

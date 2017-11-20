@@ -1,43 +1,40 @@
 package com.upm.entities;
 
-public class Clasificacion implements Comparable<Clasificacion> {
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
-    private  int puntos = 0;
+public class Clasificacion extends ArrayList<Posicion> {
 
-    private  int posicion = 0;
+    public Clasificacion(List<Equipo> equipos) {
+        for (Equipo equipo : equipos) {
+            Posicion posicion = new Posicion(equipo);
+            this.add(posicion);
+        }
+    }
 
     @Override
-    public int compareTo(Clasificacion other) {
+    public String toString() {
+        String msg = "";
+        for (Posicion posicion : this)
+            msg += posicion + "\n";
+        return msg;
+    }
 
-        if(other.getPuntos()==this.getPuntos()){
-            return 0;
+    public void visualizarClasificacionOrdenada() {
+
+        this.sort(Comparator.comparing(Posicion::getPuntos).reversed());
+
+        for (int i = 0; i < this.size(); i++)
+            this.set(i, new Posicion(this.get(i)));
+
+        for (int i = 0; i < 3; i++) {
+            // ascenso
+            this.set(i, new PosicionAscenso(this.get(i)));
+            // descenso
+            this.set(this.size() - i - 1, new PosicionDescenso(this.get(this.size() - i - 1)));
         }
-
-        return getPuntos() < other.getPuntos()?1:-1;
-    }
-
-
-    public int getPosicion() {
-        return posicion;
-    }
-
-    public int getPuntos() {
-        return puntos;
-    }
-
-    public void setPosicion(int posicion) {
-        this.posicion = posicion;
-    }
-
-    public void setPuntos(int puntos) {
-        this.puntos = puntos;
-    }
-
-    public void sumaPuntosGanados(){
-        this.puntos +=3;
-    }
-
-    public void sumaPuntosEmpatados(){
-        this.puntos +=1;
+        System.out.println("Clasificacion");
+        System.out.println(this.toString());
     }
 }

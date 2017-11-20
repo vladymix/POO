@@ -2,88 +2,32 @@ package com.upm.entities;
 
 import com.upm.utilities.Utils;
 
+import java.awt.*;
+import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Liga {
 
     private List<Equipo> equipos = new ArrayList<>();
+    private Clasificacion clasificacion;
 
     private ArrayList<Partido> partidos= new ArrayList<>();
 
-    public Liga(){
-    }
 
-    public List<Equipo> getEquipos() {
-        return equipos;
-    }
-
-    public void setEquipos(List<Equipo> equipos) {
+    public Liga(List<Equipo> equipos) {
         this.equipos = equipos;
     }
 
-    public ArrayList<Partido> getPartidos() {
-        return partidos;
-    }
-
-    public void setPartidos(ArrayList<Partido> partidos) {
-        this.partidos = partidos;
-    }
-
-    public void start(){
+    public Liga() {
         this.crearEquipos();
-
-        this.generarPartidos();
-
-        this.visualizar();
-
-        this.verClasificacion();
-
-    }
-
-    private void verClasificacion() {
-
-        // Polimosfismo ordenar por puntos
-        Collections.sort(equipos);
-
-        for(Equipo equipo: equipos){
-            visualizarClasificacion(equipo);
-        }
-    }
-
-    private void visualizarClasificacion(Equipo equipo) {
-        System.out.println("Clasificacion");
-        visualizarEquipo(equipo);
-        System.out.println(String.format("Goles favor : +%d", equipo.getGolesFavor()));
-        System.out.println(String.format("Goles contra: -%d", equipo.getGolesContra()));
-        System.out.println(String.format("Puntos clasificicion: %d", equipo.getPuntos()));
-    }
-
-    public void visualizar(){
-
-        for (Equipo equipo : this.getEquipos()) {
-            // If reload statics equipo.resetAndLoadStatistics();
-            // visualizar nombre el equipo
-            visualizarEquipo(equipo);
-
-            // visualizar todos los partidos del equipo
-            visualizarPartidosEquipo(equipo);
-
-            // visualizar partidos ganados
-            visualizarEmpatados(equipo);
-
-            // visualizar partidos perdidos
-            visualizarPerdidos(equipo);
-
-            // visualizar partidos empatados
-            visualizarEmpatados(equipo);
-        }
+        clasificacion = new Clasificacion(equipos);
     }
 
     public void crearEquipos(){
-        this.setEquipos(Utils.getEquipos());
+        this.equipos = Utils.getEquipos();
     }
+
     public void generarPartidos(){
         // Generar todos los posibles partidos
         // realizando todas las posibles combinaciones
@@ -115,25 +59,94 @@ public class Liga {
 
     }
 
+    public List<Equipo> getEquipos() {
+        return equipos;
+    }
+
+    public ArrayList<Partido> getPartidos() {
+        return partidos;
+    }
+
+    public void setPartidos(ArrayList<Partido> partidos) {
+        this.partidos = partidos;
+    }
+
+    public void showHtml(){
+        try{
+             File file = new File("index.html");
+             Desktop.getDesktop().open(file);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
+
+    public void start(){
+
+        this.generarPartidos();
+
+        this.visualizar();
+
+        this.verClasificacion();
+
+    }
+
+    public void visualizar(){
+
+        for (Equipo equipo : this.getEquipos()) {
+            // If reload statics equipo.resetAndLoadStatistics();
+            // visualizar nombre el equipo
+            visualizarEquipo(equipo);
+
+            // visualizar todos los partidos del equipo
+            visualizarPartidosEquipo(equipo);
+
+            // visualizar partidos ganados
+            visualizarEmpatados(equipo);
+
+            // visualizar partidos perdidos
+            visualizarPerdidos(equipo);
+
+            // visualizar partidos empatados
+            visualizarEmpatados(equipo);
+        }
+    }
+
+    public void visualizarEmpatados(Equipo equipo){
+        // visualizar partidos empatados
+        System.out.println(String.format("Empatados: %s", equipo.getPartidosEmpatadosAsString()));
+    }
+
     public void visualizarEquipo(Equipo equipo){
         System.out.println(equipo.getName());
     }
+
+    public void visualizarGanados(Equipo equipo){
+        // visualizar partidos ganados
+        System.out.println(String.format("GANADOS: %s", equipo.getPartidosGanadosAsString()));
+    }
+
     public void visualizarPartidosEquipo(Equipo equipo){
         // visualizar todos los partidos del equipo
         System.out.println(String.format("TODOS: %s", equipo.getTodosPartidosAsString()));
 
     }
-    public void visualizarGanados(Equipo equipo){
-        // visualizar partidos ganados
-        System.out.println(String.format("GANADOS: %s", equipo.getPartidosGanadosAsString()));
-    }
+
     public void visualizarPerdidos(Equipo equipo){
         // visualizar partidos perdidos
         System.out.println(String.format("PERDIDOS: %s", equipo.getPartidosPerdidosAsString()));
     }
-    public void visualizarEmpatados(Equipo equipo){
-        // visualizar partidos empatados
-        System.out.println(String.format("Empatados: %s", equipo.getPartidosEmpatadosAsString()));
+
+    private void verClasificacion() {
+        this.clasificacion.visualizarClasificacionOrdenada();
+        this.showHtml();
+    }
+
+    private void visualizarClasificacion(Equipo equipo) {
+        System.out.println("Clasificacion");
+        visualizarEquipo(equipo);
+        System.out.println(String.format("Goles favor : +%d", equipo.getPosicion().getGolesFavor()));
+        System.out.println(String.format("Goles contra: -%d", equipo.getPosicion().getGolesContra()));
+        System.out.println(String.format("Puntos clasificicion: %d", equipo.getPosicion().getPosition()));
     }
 
 }
