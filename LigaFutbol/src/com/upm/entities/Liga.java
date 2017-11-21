@@ -1,5 +1,6 @@
 package com.upm.entities;
 
+import com.upm.inplementations.PreviewAsString;
 import com.upm.utilities.Utils;
 
 import java.awt.*;
@@ -22,6 +23,7 @@ public class Liga {
     public Liga() {
         this.crearEquipos();
         clasificacion = new Clasificacion(equipos);
+        this.clasificacion.setModePreview(new PreviewAsString());
     }
 
     public void crearEquipos(){
@@ -84,8 +86,10 @@ public class Liga {
 
         this.generarPartidos();
 
+        // To string
         this.visualizar();
 
+        // With interfaces
         this.verClasificacion();
 
     }
@@ -137,16 +141,9 @@ public class Liga {
     }
 
     private void verClasificacion() {
-        this.clasificacion.visualizarClasificacionOrdenada();
-        this.showHtml();
-    }
+        this.clasificacion.ordenarClasificacion();
+        System.out.println("Output preview Data");
+        System.out.println(this.clasificacion.onPreviewData());
 
-    private void visualizarClasificacion(Equipo equipo) {
-        System.out.println("Clasificacion");
-        visualizarEquipo(equipo);
-        System.out.println(String.format("Goles favor : +%d", equipo.getPosicion().getGolesFavor()));
-        System.out.println(String.format("Goles contra: -%d", equipo.getPosicion().getGolesContra()));
-        System.out.println(String.format("Puntos clasificicion: %d", equipo.getPosicion().getPosition()));
     }
-
 }

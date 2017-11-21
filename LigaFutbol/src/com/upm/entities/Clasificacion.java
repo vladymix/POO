@@ -6,6 +6,8 @@ import java.util.List;
 
 public class Clasificacion extends ArrayList<Posicion> {
 
+   private IPreviewData previewData;
+
     public Clasificacion(List<Equipo> equipos) {
         for (Equipo equipo : equipos) {
             Posicion posicion = new Posicion(equipo);
@@ -13,15 +15,19 @@ public class Clasificacion extends ArrayList<Posicion> {
         }
     }
 
-    @Override
-    public String toString() {
-        String msg = "";
-        for (Posicion posicion : this)
-            msg += posicion + "\n";
-        return msg;
+    public IPreviewData getModePreview() {
+        return previewData;
     }
 
-    public void visualizarClasificacionOrdenada() {
+    public String onPreviewData() {
+       return previewData.preview(this);
+    }
+
+    public void setModePreview(IPreviewData previewData){
+        this.previewData = previewData;
+    }
+
+    public void ordenarClasificacion() {
 
         this.sort(Comparator.comparing(Posicion::getPuntos).reversed());
 
@@ -34,7 +40,6 @@ public class Clasificacion extends ArrayList<Posicion> {
             // descenso
             this.set(this.size() - i - 1, new PosicionDescenso(this.get(this.size() - i - 1)));
         }
-        System.out.println("Clasificacion");
-        System.out.println(this.toString());
+
     }
 }
