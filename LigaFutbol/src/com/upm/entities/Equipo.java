@@ -20,11 +20,11 @@ public class Equipo {
 
     public void actualizaClasificacion(Partido partido) {
         this.posicion.actualizaPosicion(this, partido);
-        this.partidos.add(partido);
         this.savePartido(partido);
     }
 
     private void savePartido(Partido partidoJugado) {
+        this.partidos.add(partidoJugado);
 
         boolean jugoComoLocal = partidoJugado.getEquipoLocal().getName().equals(this.getName());
 

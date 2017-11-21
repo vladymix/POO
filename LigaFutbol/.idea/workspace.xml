@@ -2,18 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a348d2-9941-49d1-822d-06069c81d69d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsString.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/LigaPreview.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/upm/entities/LigaPreview.java" afterPath="$PROJECT_DIR$/src/com/upm/entities/IPreviewData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsHtml.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsPdf.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/Clasificacion.class" afterPath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/Clasificacion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/Liga.class" afterPath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/Liga.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/Equipo.class" afterPath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/Equipo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/Posicion.class" afterPath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/Posicion.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/PosicionAscenso.class" afterPath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/PosicionAscenso.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/PosicionDescenso.class" afterPath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/entities/PosicionDescenso.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/inplementations/PreviewAsString.class" afterPath="$PROJECT_DIR$/out/production/LigaFutbol/com/upm/inplementations/PreviewAsString.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/upm/entities/Clasificacion.java" afterPath="$PROJECT_DIR$/src/com/upm/entities/Clasificacion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/upm/entities/Equipo.java" afterPath="$PROJECT_DIR$/src/com/upm/entities/Equipo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/upm/entities/Liga.java" afterPath="$PROJECT_DIR$/src/com/upm/entities/Liga.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/upm/entities/Posicion.java" afterPath="$PROJECT_DIR$/src/com/upm/entities/Posicion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/upm/entities/PosicionAscenso.java" afterPath="$PROJECT_DIR$/src/com/upm/entities/PosicionAscenso.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/upm/entities/PosicionDescenso.java" afterPath="$PROJECT_DIR$/src/com/upm/entities/PosicionDescenso.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsString.java" afterPath="$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsString.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +33,8 @@
       <file leaf-file-name="Equipo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Equipo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state relative-caret-position="743">
+              <caret line="95" column="38" lean-forward="false" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -39,22 +44,28 @@
         <entry file="file://$PROJECT_DIR$/src/com/upm/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Posicion.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Posicion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Posicion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="-506">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <element signature="e#1753#1754#0" expanded="true" />
-                <element signature="e#1792#1793#0" expanded="true" />
-                <element signature="e#1903#1904#0" expanded="true" />
-                <element signature="e#1932#1933#0" expanded="true" />
+                <element signature="e#1540#1541#0" expanded="true" />
+                <element signature="e#1569#1570#0" expanded="true" />
+                <element signature="e#1672#1673#0" expanded="true" />
+                <element signature="e#1705#1706#0" expanded="true" />
+                <element signature="e#1828#1829#0" expanded="true" />
+                <element signature="e#1867#1868#0" expanded="true" />
+                <element signature="e#1978#1979#0" expanded="true" />
+                <element signature="e#2007#2008#0" expanded="true" />
+                <element signature="e#2038#2039#0" expanded="true" />
+                <element signature="e#2115#2116#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,9 +74,11 @@
       <file leaf-file-name="Liga.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Liga.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="145" column="53" lean-forward="false" selection-start-line="145" selection-start-column="53" selection-end-line="145" selection-end-column="53" />
+            <state relative-caret-position="259">
+              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding>
+                <element signature="e#774#775#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
                 <element signature="method#generarPartidos#0;class#Liga#0" expanded="false" />
                 <element signature="method#visualizarEmpatados#0;class#Liga#0" expanded="false" />
                 <element signature="method#visualizarGanados#0;class#Liga#0" expanded="false" />
@@ -75,38 +88,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IPreviewData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/upm/entities/IPreviewData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PreviewAsString.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsString.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="198">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#288#289#0" expanded="true" />
                 <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#389#390#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PosicionAscenso.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/upm/entities/PosicionAscenso.java">
+      <file leaf-file-name="IPreviewData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/upm/entities/IPreviewData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="30">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreviewAsHtml.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsHtml.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="50" />
               <folding>
-                <element signature="e#185#186#0" expanded="true" />
-                <element signature="e#238#239#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreviewAsPdf.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsPdf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
+                <element signature="e#312#313#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#473#474#0" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PosicionDescenso.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/upm/entities/PosicionDescenso.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <folding>
+                <element signature="e#145#146#0" expanded="true" />
+                <element signature="e#193#194#0" expanded="true" />
+                <element signature="e#243#244#0" expanded="true" />
+                <element signature="e#274#275#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,15 +164,18 @@
       <file leaf-file-name="Clasificacion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Clasificacion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="391">
+              <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="33" />
               <folding>
-                <element signature="e#437#438#0" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
-                <element signature="e#555#556#0" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
-                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
+                <element signature="e#493#494#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="method#ordenarClasificacion#0;class#Clasificacion#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -160,15 +212,17 @@
         <option value="$PROJECT_DIR$/src/com/upm/entities/Casificacion.java" />
         <option value="$PROJECT_DIR$/src/com/upm/Main.java" />
         <option value="$PROJECT_DIR$/src/com/upm/entities/Partido.java" />
-        <option value="$PROJECT_DIR$/src/com/upm/entities/PosicionAscenso.java" />
-        <option value="$PROJECT_DIR$/src/com/upm/entities/PosicionDescenso.java" />
-        <option value="$PROJECT_DIR$/src/com/upm/entities/Equipo.java" />
         <option value="$PROJECT_DIR$/src/com/upm/entities/LigaPreview.java" />
         <option value="$PROJECT_DIR$/src/com/upm/entities/IPreviewData.java" />
+        <option value="$PROJECT_DIR$/src/com/upm/entities/PosicionAscenso.java" />
+        <option value="$PROJECT_DIR$/src/com/upm/entities/PosicionDescenso.java" />
         <option value="$PROJECT_DIR$/src/com/upm/entities/Clasificacion.java" />
-        <option value="$PROJECT_DIR$/src/com/upm/entities/Liga.java" />
-        <option value="$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsString.java" />
+        <option value="$PROJECT_DIR$/src/com/upm/entities/Equipo.java" />
         <option value="$PROJECT_DIR$/src/com/upm/entities/Posicion.java" />
+        <option value="$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsString.java" />
+        <option value="$PROJECT_DIR$/src/com/upm/entities/Liga.java" />
+        <option value="$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsHtml.java" />
+        <option value="$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsPdf.java" />
       </list>
     </option>
   </component>
@@ -319,6 +373,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1280" height="777" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -326,15 +381,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28936172" sideWeight="0.509375" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28936172" sideWeight="0.515625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28936172" sideWeight="0.490625" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28936172" sideWeight="0.484375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.496875" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.490625" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -356,37 +411,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/upm/entities/Liga.java</url>
-          <line>36</line>
+          <line>38</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/upm/utilities/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/upm/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Liga.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1575">
           <caret line="116" column="31" lean-forward="false" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
           <folding>
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
             <element signature="method#generarPartidos#0;class#Liga#0" expanded="false" />
             <element signature="method#visualizarEmpatados#0;class#Liga#0" expanded="false" />
             <element signature="method#visualizarGanados#0;class#Liga#0" expanded="false" />
@@ -696,19 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/PosicionDescenso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="e#123#124#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Comparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
@@ -740,19 +768,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/PosicionAscenso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/PosicionDescenso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#243#244#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/upm/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Posicion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-506">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#1540#1541#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+            <element signature="e#1672#1673#0" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1828#1829#0" expanded="true" />
+            <element signature="e#1867#1868#0" expanded="true" />
+            <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="e#2007#2008#0" expanded="true" />
+            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/IPreviewData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Equipo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="95" column="38" lean-forward="false" selection-start-line="95" selection-start-column="19" selection-end-line="95" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Clasificacion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="method#ordenarClasificacion#0;class#Clasificacion#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Liga.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="145" column="53" lean-forward="false" selection-start-line="145" selection-start-column="53" selection-end-line="145" selection-end-column="53" />
+        <state relative-caret-position="259">
+          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding>
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
             <element signature="method#generarPartidos#0;class#Liga#0" expanded="false" />
             <element signature="method#visualizarEmpatados#0;class#Liga#0" expanded="false" />
             <element signature="method#visualizarGanados#0;class#Liga#0" expanded="false" />
@@ -761,69 +884,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/IPreviewData.java">
+    <entry file="file://$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsHtml.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Clasificacion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/PosicionAscenso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="195">
+          <caret line="13" column="50" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Equipo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/upm/inplementations/PreviewAsPdf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/upm/entities/Posicion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="49" />
           <folding>
-            <element signature="e#1753#1754#0" expanded="true" />
-            <element signature="e#1792#1793#0" expanded="true" />
-            <element signature="e#1903#1904#0" expanded="true" />
-            <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
           </folding>
         </state>
       </provider>

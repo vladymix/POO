@@ -1,6 +1,6 @@
 package com.upm.entities;
 
-public class Posicion {
+public abstract class Posicion {
 
     private Equipo equipo;
     private int golesFavor = 0;
@@ -9,6 +9,8 @@ public class Posicion {
     private int partidos_ganados = 0;
     private int partidos_empatados = 0;
     private int partidos_perdidos = 0;
+
+    public abstract String getPreview(IPreviewData previewData);
 
     public Posicion(Equipo equipo) {
         this.equipo = equipo;
@@ -68,5 +70,9 @@ public class Posicion {
 
     public int getPuntos() {
         return puntos;
+    }
+
+    public String toString(){
+        return this.getEquipo().getName() + " pts "+ this.getPuntos();
     }
 }

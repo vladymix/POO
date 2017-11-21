@@ -1,5 +1,6 @@
 package com.upm.entities;
 
+import com.upm.inplementations.PreviewAsHtml;
 import com.upm.inplementations.PreviewAsString;
 import com.upm.utilities.Utils;
 
@@ -23,7 +24,8 @@ public class Liga {
     public Liga() {
         this.crearEquipos();
         clasificacion = new Clasificacion(equipos);
-        this.clasificacion.setModePreview(new PreviewAsString());
+        //this.clasificacion.setModePreview(new PreviewAsString());
+        this.clasificacion.setModePreview(new PreviewAsHtml());
     }
 
     public void crearEquipos(){
@@ -73,14 +75,6 @@ public class Liga {
         this.partidos = partidos;
     }
 
-    public void showHtml(){
-        try{
-             File file = new File("index.html");
-             Desktop.getDesktop().open(file);
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }
-    }
 
     public void start(){
 

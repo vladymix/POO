@@ -5,23 +5,19 @@ import com.upm.entities.Equipo;
 import com.upm.entities.IPreviewData;
 import com.upm.entities.Posicion;
 
-public class PreviewAsString implements IPreviewData {
+public class PreviewAsPdf implements IPreviewData {
     @Override
     public String preview(Equipo equipo) {
-        return equipo.getName();
+        return null;
     }
 
     @Override
     public String preview(Posicion posicion) {
-        return  posicion.toString();
+        return null;
     }
 
     @Override
     public String preview(Clasificacion clasificacion) {
-        String msg = "";
-        for (Posicion posicion : clasificacion)
-            msg += preview(posicion) + "\n";
-
-        return msg;
+        return null;
     }
 }

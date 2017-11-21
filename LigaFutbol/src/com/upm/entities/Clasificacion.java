@@ -10,7 +10,14 @@ public class Clasificacion extends ArrayList<Posicion> {
 
     public Clasificacion(List<Equipo> equipos) {
         for (Equipo equipo : equipos) {
-            Posicion posicion = new Posicion(equipo);
+
+            Posicion posicion = new Posicion(equipo) {
+                @Override
+                public String getPreview(IPreviewData previewData) {
+                    return null;
+                }
+            };
+
             this.add(posicion);
         }
     }
@@ -30,9 +37,6 @@ public class Clasificacion extends ArrayList<Posicion> {
     public void ordenarClasificacion() {
 
         this.sort(Comparator.comparing(Posicion::getPuntos).reversed());
-
-        for (int i = 0; i < this.size(); i++)
-            this.set(i, new Posicion(this.get(i)));
 
         for (int i = 0; i < 3; i++) {
             // ascenso
