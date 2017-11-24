@@ -1,6 +1,7 @@
 package com.upm.entities;
 
 import com.upm.inplementations.PreviewAsHtml;
+import com.upm.inplementations.PreviewAsPdf;
 import com.upm.inplementations.PreviewAsString;
 import com.upm.utilities.Utils;
 
@@ -23,9 +24,7 @@ public class Liga {
 
     public Liga() {
         this.crearEquipos();
-        clasificacion = new Clasificacion(equipos);
-        //this.clasificacion.setModePreview(new PreviewAsString());
-        this.clasificacion.setModePreview(new PreviewAsHtml());
+        this.clasificacion = new Clasificacion(equipos);
     }
 
     public void crearEquipos(){
@@ -49,7 +48,7 @@ public class Liga {
 
                 String description = String.format("Partido nº%d  %s  vs %s | %d - %d", i, partido.getEquipoLocal().getName(), partido.getEquipoVisitante().getName(), partido.getGolesLocal(), partido.getGolesVisitantes());
 
-                System.out.println(description);
+                //System.out.println(description);
 
                 for(Equipo equipo : this.getEquipos()){
                     // Si en el partido juega como visitante o local añadir a la lista de partidos jugados
@@ -80,8 +79,8 @@ public class Liga {
 
         this.generarPartidos();
 
-        // To string
-        this.visualizar();
+
+        this.clasificacion.choseModePreview();
 
         // With interfaces
         this.verClasificacion();

@@ -12,6 +12,9 @@ import java.io.File;
 import java.io.FileWriter;
 
 public class PreviewAsHtml implements IPreviewData {
+
+    private final String FILE_NAME = "index.html";
+
     @Override
     public String preview(Equipo equipo) {
         return "\n\t<td>"+ equipo.getName()+"</td>";
@@ -36,7 +39,7 @@ public class PreviewAsHtml implements IPreviewData {
 
         String htlm = "<html>\n" +
                 "<body>\n" +
-                "<h1 style=\"color: #5e9ca0;\">Liga</h1>\n" +
+                "<h1 style=\"color: #0087ff;\">Liga de futbol</h1>\n" +
                 "<table style=\"width: 538px;\">\n" +
                 "\n" +
                 "<thead style=\"\n" +
@@ -61,19 +64,19 @@ public class PreviewAsHtml implements IPreviewData {
 
 
         try{
-            File file = new File("index.html");
+            File file = new File(FILE_NAME);
             if(file.exists()){
                 file.delete();
             }
 
             BufferedWriter writer = null;
-            writer = new BufferedWriter( new FileWriter( "index.html"));
+            writer = new BufferedWriter( new FileWriter( FILE_NAME));
             writer.write( htlm);
 
             if ( writer != null)
                 writer.close( );
 
-            file = new File("index.html");
+            file = new File(FILE_NAME);
 
             Desktop.getDesktop().open(file);
         }catch (Exception ex){
@@ -81,6 +84,6 @@ public class PreviewAsHtml implements IPreviewData {
         }
 
 
-        return htlm;
+        return "File Html Created";
     }
 }
